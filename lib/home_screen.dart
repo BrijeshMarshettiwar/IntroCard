@@ -62,9 +62,6 @@ class home_screen extends StatelessWidget {
                       children: [
                         Text(
                           'description: I’m John Doe, a Flutter Developer specializing in building fast, responsive, and user-friendly mobile apps for Android and iOS.',
-                          maxLines: 7,
-                          softWrap: true, // allows wrapping
-                          overflow: TextOverflow.clip, // or ellipsis (...)
                         ),
                       ],
                     ),
