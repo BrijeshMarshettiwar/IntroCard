@@ -36,34 +36,73 @@ class home_screen extends StatelessWidget {
               ),
             ],
           ),
-          child: Row(
+          child: Column(
             children: [
-              Column(
+              Row(
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(
-                      15,
-                    ), // Round image corners too
-                    child: CircleAvatar(
-                      radius: 40, // size of the avatar
-                      backgroundImage: AssetImage('images/avatar.jpg'),
+                  Column(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ), // Round image corners too
+                        child: CircleAvatar(
+                          radius: 40, // size of the avatar
+                          backgroundImage: AssetImage('images/avatar.jpg'),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(9.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Name: John Doe',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              'Title: Flutter Developer',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(children: [Text('Name: John Doe')]),
-                    Row(children: [Text('Title: Flutter Developer')]),
-                    Row(
-                      children: [
-                        Text(
-                          'description: I’m John Doe, a Flutter Developer specializing in building fast, responsive, and user-friendly mobile apps for Android and iOS.',
-                        ),
-                      ],
+                    Text(
+                      "Description:",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      "I’m John Doe, a Flutter Developer specializing in building fast, responsive, and user-friendly mobile apps for Android and iOS.",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ],
                 ),
